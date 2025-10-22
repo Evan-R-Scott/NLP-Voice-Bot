@@ -1,4 +1,4 @@
-# COMP-49x-24-25-San-Diego-Food-Bank - NLP Service Bot
+# Owned by a closed organization, this is an outdated old version
 
 ## Overview:
 
@@ -24,9 +24,9 @@
     - Monitoring: The monitoring page operates as a metric display for the admins to utilize and identify 
     key insights based on the call system. There are several charts and displays to demonstrate how callers are interacting with the call service, and provide admins with statistics such as the total calls, total calls made in each language, and so forth. There are 2 buttons, the topic button which allows admins to filter the monitoring page charts by certain topics (FAQs, scheduling, etc.) and a time filter button to allow admins to filter the page by Year, Month, or Day. 
 
-    - Account Approval: In the account approval page, superadmins, or certain food bank employees with special approval access, can utilize this page to accept any food bank admin who wishes to use this dashboard. To uphold security, this page functions as a gatekeeper to allow any superuser to accept, or deny, an admin based on their food bank credentials to allow them to log into this dashboard. 
+    - Account Approval: In the account approval page, superadmins, or certain individuals with special approval access, can utilize this page to accept any who wishes to use this dashboard. To uphold security, this page functions as a gatekeeper to allow any superuser to accept, or deny, an admin based on their corporate credentials to allow them to log into this dashboard. 
 
-    - Scheduling: (TODO remove this I'm assuming unless we want to explain how each feature of the bot works) Users can interact with the bot to schedule appointments for the foodbank. This service is intended to interact with the scheduling service and can ensure various constraints like <= 20 participants per slot, 2 week scheduling-out periods, and confirmation of scheduling via sms. All interactions are tracked for quality purposes.
+    - Scheduling: Users can interact with the bot to schedule appointments. This service is intended to interact with the scheduling service and can ensure various constraints like <= 20 participants per slot, 2 week scheduling-out periods, and confirmation of scheduling via sms. All interactions are tracked for quality purposes.
 
 ## Software Dependencies
 
@@ -75,29 +75,14 @@
 
             7) Move this .json file to the root of this project (at the same directory level as the README). (This will be used under later during Running the Application Step 5. The file path should be ./NameOfYourFile.json)
 
-## Running the Application
+## Running the Application [Local]
 
-Prior to running this application, it is based on the assumption that you are already set up with the software dependencies
+Before running this application, it is based on the assumption that you are already set up with the software dependencies
 listed above, you have generated your API keys and have a Twilio phone number assigned to your account.
 
-1. Clone the repo:
+1. Clone the repo/Install Docker
 
-   https://github.com/usd-cs/COMP-49x-24-25-san-diego-food-bank.git
-
-   or
-
-   git@github.com:usd-cs/COMP-49x-24-25-san-diego-food-bank.git
-
-2. Install Docker
-
-   https://www.docker.com/products/docker-desktop/
-
-3. Ensure the Docker app that you just downloaded is open, open a terminal, and type the following to connect your Docker account
-   (Replace your username with whatever username you just used to sign up)
-
-   docker login -u <username>
-
-5. Update .env files
+2. Update .env files
     - Create 2 files in the root of the project (at the same directory level as the README): twilio.env and gpt.env
       
         MAKE SURE NOT TO COMMIT THESE FILES TO THE GIT REPOSITORY AS THEY ARE SENSITIVE CREDENTIALS
@@ -114,7 +99,7 @@ listed above, you have generated your API keys and have a Twilio phone number as
             OPENAI_API_KEY="<PASTE API KEY HERE>"
             GOOGLE_APPLICATION_CREDENTIALS="<PASTE FILE PATH TO JSON FILE HERE>"
 
-7. Starting ngrok
+3. Starting ngrok
 
     Run the following command in your terminal:
 
@@ -122,7 +107,7 @@ listed above, you have generated your API keys and have a Twilio phone number as
 
    (then follow the steps in the twilio setup to paste this link)
 
-10. Running Docker
+4. Running Docker
 
    Open a new terminal, separate from the one that is running ngrok (Ensure the docker app is open/running)
 
