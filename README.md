@@ -1,4 +1,4 @@
-# Owned by a closed organization, this is an outdated old version
+# Owned by a closed organization, this is an outdated old version without the proxy and updated API/software
 
 ## Overview:
 
